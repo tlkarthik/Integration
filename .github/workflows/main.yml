@@ -32,13 +32,12 @@ jobs:
           # will put all file under this path
           local_path: ./* # default is ./*
           # files will copy to under remote_path
-          remote_path: /home/ec2-user/
+          remote_path: /home/ec2-user/MultiplePostcall/
           
           # sftp args
           args: '-o ConnectTimeout=15'
       - uses: actions/setup-node@v2
         with:
           node-version: '17'
-          cache: 'npm'
       - run: npm install
       - run: node index.js
