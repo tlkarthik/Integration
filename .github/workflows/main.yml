@@ -35,4 +35,10 @@ jobs:
           remote_path: /home/ec2-user/
           
           # sftp args
-          args: '-o ConnectTimeout=5'
+          args: '-o ConnectTimeout=15'
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache: 'npm'
+      - run: npm install
+      - run: node index.js
