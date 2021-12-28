@@ -38,7 +38,7 @@ jobs:
           args: '-o ConnectTimeout=15'
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '17'
           cache: 'npm'
       - run: npm install
       - run: node index.js
